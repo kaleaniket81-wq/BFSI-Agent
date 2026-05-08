@@ -1,0 +1,153 @@
+[
+  {
+    "question": "What is the EMI amount for loan L-2024-001?",
+    "expected_answer": "The EMI for loan L-2024-001 is ₹10,234.56 per month.",
+    "expected_sources": ["sample_loan_agreement"],
+    "doc_type": "loan_agreement"
+  },
+  {
+    "question": "What is the interest rate on this loan?",
+    "expected_answer": "The interest rate is 8.5% per annum on a reducing balance basis.",
+    "expected_sources": ["sample_loan_agreement"],
+    "doc_type": "loan_agreement"
+  },
+  {
+    "question": "What is the loan tenure?",
+    "expected_answer": "The loan tenure is 60 months (5 years).",
+    "expected_sources": ["sample_loan_agreement"],
+    "doc_type": "loan_agreement"
+  },
+  {
+    "question": "What are the late payment penalties?",
+    "expected_answer": "A penal interest of 2% per month will be levied on the overdue amount in case of default.",
+    "expected_sources": ["sample_loan_agreement"],
+    "doc_type": "loan_agreement"
+  },
+  {
+    "question": "What is the principal loan amount?",
+    "expected_answer": "The principal loan amount is INR 5,00,000 (Five Lakhs).",
+    "expected_sources": ["sample_loan_agreement"],
+    "doc_type": "loan_agreement"
+  },
+  {
+    "question": "Who are the parties in this loan agreement?",
+    "expected_answer": "The lender is BFSI Finance Ltd, Pune and the borrower is Mr. Rajesh Kumar.",
+    "expected_sources": ["sample_loan_agreement"],
+    "doc_type": "loan_agreement"
+  },
+  {
+    "question": "What is the disbursement date?",
+    "expected_answer": "The disbursement date is 15 January 2024.",
+    "expected_sources": ["sample_loan_agreement"],
+    "doc_type": "loan_agreement"
+  },
+  {
+    "question": "What security or collateral is provided?",
+    "expected_answer": "The borrower has pledged Fixed Deposit No. FD-2024-9921 of INR 1,00,000 as collateral.",
+    "expected_sources": ["sample_loan_agreement"],
+    "doc_type": "loan_agreement"
+  },
+  {
+    "question": "What are the prepayment terms?",
+    "expected_answer": "Prepayment is allowed after 6 months with a 2% prepayment penalty.",
+    "expected_sources": ["sample_loan_agreement"],
+    "doc_type": "loan_agreement"
+  },
+  {
+    "question": "When is the first EMI due?",
+    "expected_answer": "The first EMI is due on 15 February 2024.",
+    "expected_sources": ["sample_loan_agreement"],
+    "doc_type": "loan_agreement"
+  },
+  {
+    "question": "What is the purpose of this loan?",
+    "expected_answer": "The loan is sanctioned for the purpose of home renovation.",
+    "expected_sources": ["sample_loan_agreement"],
+    "doc_type": "loan_agreement"
+  },
+  {
+    "question": "What insurance is mandatory?",
+    "expected_answer": "A term insurance cover of INR 5,00,000 is mandatory for the loan tenure.",
+    "expected_sources": ["sample_loan_agreement"],
+    "doc_type": "loan_agreement"
+  },
+  {
+    "question": "When does the last EMI fall due?",
+    "expected_answer": "The last EMI is due on 15 January 2029.",
+    "expected_sources": ["sample_loan_agreement"],
+    "doc_type": "loan_agreement"
+  },
+  {
+    "question": "How many part payments are allowed per year?",
+    "expected_answer": "Part-payment of minimum INR 50,000 is allowed twice per year.",
+    "expected_sources": ["sample_loan_agreement"],
+    "doc_type": "loan_agreement"
+  },
+  {
+    "question": "What is the borrower address?",
+    "expected_answer": "The borrower's address is 45 MG Road, Pune - 411001.",
+    "expected_sources": ["sample_loan_agreement"],
+    "doc_type": "loan_agreement"
+  },
+  {
+    "question": "What happens if EMI is not paid?",
+    "expected_answer": "If EMI is not paid, a penal interest of 2% per month is levied on the overdue amount.",
+    "expected_sources": ["sample_loan_agreement"],
+    "doc_type": "loan_agreement"
+  },
+  {
+    "question": "What is the reducing balance method?",
+    "expected_answer": "I don't have enough information in the provided documents.",
+    "doc_type": "loan_agreement"
+  },
+  {
+    "question": "What is the loan ID?",
+    "expected_answer": "The loan ID is L-2024-001.",
+    "expected_sources": ["sample_loan_agreement"],
+    "doc_type": "loan_agreement"
+  },
+  {
+    "question": "Who signed the agreement?",
+    "expected_answer": "The agreement was signed by Rajesh Kumar (borrower) and S. Patil (lender representative) on 15/01/2024.",
+    "expected_sources": ["sample_loan_agreement"],
+    "doc_type": "loan_agreement"
+  },
+  {
+    "question": "penalty?",
+    "expected_answer": "A penal interest of 2% per month will be levied on the overdue amount in case of EMI default.",
+    "expected_sources": ["sample_loan_agreement"],
+    "doc_type": "loan_agreement",
+    "note": "Short vague query — tests query rewriting"
+  },
+  {
+    "question": "EMI",
+    "expected_answer": "The monthly EMI is ₹10,234.56 due on the 15th of every month.",
+    "expected_sources": ["sample_loan_agreement"],
+    "doc_type": "loan_agreement",
+    "note": "Single word query — tests query rewriting"
+  },
+  {
+    "question": "What is the weather today?",
+    "expected_answer": "I don't have enough information in the provided documents.",
+    "doc_type": "loan_agreement",
+    "note": "Out-of-domain query — tests grounding"
+  },
+  {
+    "question": "Show me all loan terms and conditions",
+    "expected_answer": "The loan agreement contains terms including 8.5% interest, 60 month tenure, 2% penal interest, 2% prepayment charge after 6 months, and mandatory term insurance.",
+    "expected_sources": ["sample_loan_agreement"],
+    "doc_type": "loan_agreement"
+  },
+  {
+    "question": "What are the foreclosure charges?",
+    "expected_answer": "The loan can be prepaid after 6 months with a 2% prepayment penalty.",
+    "expected_sources": ["sample_loan_agreement"],
+    "doc_type": "loan_agreement"
+  },
+  {
+    "question": "Is there any insurance requirement?",
+    "expected_answer": "Yes, a term insurance cover of INR 5,00,000 is mandatory for the entire loan tenure.",
+    "expected_sources": ["sample_loan_agreement"],
+    "doc_type": "loan_agreement"
+  }
+]

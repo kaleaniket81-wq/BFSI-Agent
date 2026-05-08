@@ -1,0 +1,36 @@
+LOAN AGREEMENT
+
+Loan ID: L-2024-001
+Date: 15 January 2024
+
+PARTIES
+Lender: BFSI Finance Ltd, Pune, Maharashtra
+Borrower: Mr. Rajesh Kumar, 45 MG Road, Pune - 411001
+
+LOAN DETAILS
+Principal Amount: INR 5,00,000 (Five Lakhs Only)
+Rate of Interest: 8.5% per annum (reducing balance)
+Tenure: 60 months (5 years)
+EMI Amount: INR 10,234.56 per month
+First EMI Date: 15 February 2024
+Last EMI Date: 15 January 2029
+Disbursement Date: 15 January 2024
+
+PURPOSE OF LOAN
+The loan is sanctioned for the purpose of home renovation as declared by the borrower.
+
+REPAYMENT SCHEDULE
+The borrower agrees to pay EMI of INR 10,234.56 on the 15th of every month.
+In case of default, a penal interest of 2% per month will be levied on overdue amount.
+
+SECURITY
+The borrower has pledged Fixed Deposit No. FD-2024-9921 of INR 1,00,000 as collateral.
+
+TERMS AND CONDITIONS
+1. Prepayment allowed after 6 months with 2% prepayment penalty.
+2. Part-payment of minimum INR 50,000 allowed twice per year.
+3. Insurance of INR 5,00,000 term cover mandatory for loan tenure.
+
+SIGNATURES
+Borrower: Rajesh Kumar        Date: 15/01/2024
+Lender Representative: S. Patil   Date: 15/01/2024

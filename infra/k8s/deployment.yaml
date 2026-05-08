@@ -1,0 +1,118 @@
+# infra/k8s/deployment.yaml
+# kubectl apply -f infra/k8s/
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bfsi-api
+  labels: { app: bfsi-api }
+spec:
+  replicas: 2
+  selector:
+    matchLabels: { app: bfsi-api }
+  template:
+    metadata:
+      labels: { app: bfsi-api }
+    spec:
+      containers:
+        - name: bfsi-api
+          image: bfsi-doc-intelligence-api:latest
+          ports:
+            - containerPort: 8000
+          envFrom:
+            - secretRef:
+                name: bfsi-secrets
+          livenessProbe:
+            httpGet: { path: /api/health, port: 8000 }
+            initialDelaySeconds: 30
+            periodSeconds: 10
+          resources:
+            requests: { cpu: "250m", memory: "512Mi" }
+            limits:   { cpu: "1000m", memory: "2Gi" }
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: bfsi-api-svc
+spec:
+  selector: { app: bfsi-api }
+  ports:
+    - port: 8000
+      targetPort: 8000
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bfsi-gateway
+  labels: { app: bfsi-gateway }
+spec:
+  replicas: 1
+  selector:
+    matchLabels: { app: bfsi-gateway }
+  template:
+    metadata:
+      labels: { app: bfsi-gateway }
+    spec:
+      containers:
+        - name: bfsi-gateway
+          image: bfsi-doc-intelligence-gateway:latest
+          ports:
+            - containerPort: 9090
+          env:
+            - name: FASTAPI_URL
+              value: "http://bfsi-api-svc:8000"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: bfsi-gateway-svc
+spec:
+  type: LoadBalancer
+  selector: { app: bfsi-gateway }
+  ports:
+    - port: 80
+      targetPort: 9090
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: ollama
+spec:
+  serviceName: ollama
+  replicas: 1
+  selector:
+    matchLabels: { app: ollama }
+  template:
+    metadata:
+      labels: { app: ollama }
+    spec:
+      containers:
+        - name: ollama
+          image: ollama/ollama:latest
+          ports:
+            - containerPort: 11434
+          volumeMounts:
+            - name: ollama-models
+              mountPath: /root/.ollama
+          resources:
+            requests: { memory: "4Gi" }
+            limits:   { memory: "8Gi" }
+  volumeClaimTemplates:
+    - metadata:
+        name: ollama-models
+      spec:
+        accessModes: ["ReadWriteOnce"]
+        resources:
+          requests:
+            storage: 20Gi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ollama
+spec:
+  selector: { app: ollama }
+  ports:
+    - port: 11434
+      targetPort: 11434
